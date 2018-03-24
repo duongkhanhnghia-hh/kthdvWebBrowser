@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>food</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css' />
+
+    <!--MOBILE DEVICE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <!--CSS-->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" th:href="@{/food/css/bootstrap.css}"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css" th:href="@{/food/css/style.css}"/>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" th:href="@{/food/css/font-awesome.css}"/>
+    <link type="text/css" rel="stylesheet" href="css/animate.css" th:href="@{/food/css/animate.css}"/>
+    <link type="text/css" rel="stylesheet" href="css/responsive.css" th:href="@{/food/css/responsive.css}"/>
+
+    <!--JS-->
+
+    <script type="text/javascript"  src="api.js" th:src="@{js/api.js}"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js" th:src="@{/food/js/jquery-1.11.3.min.js}"></script>
+    <script type="text/javascript" src="js/modernizr.js" th:src="@{/food/js/modernizr.js}"></script>
+    <script src="js/scripts.js" th:src="@{/food/js/scripts.js}"></script>
+    <script src="js/waypoints.min.js" th:src="@{/food/js/waypoints.min.js}"></script>
+
+</head>
+<body>
+<!-- Paste this code after body tag -->
+<div class="se-pre-con"></div>
+<!-- Ends -->
+
+<header>
+    <div class="container">
+        <div class="row clearfix" id="home">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="logo">
+                    <h1> <a href="#"><img src="images/TMPS000136.png" alt="" /></a> </h1>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="contact">
+                    <p>Questions? Call us Toll-free!<span class="number"><a href="#">1800-0000-7777</a></span><span class="time">(11AM to 11PM)</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="saction1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="menu">
+                    <div class="mobile-nav-container"> </div>
+                    <div class="mobile-nav-btn"><img class="nav-open" src=					      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/6214/nav-open.png" alt="Nav Button Open" /> <img class="nav-close" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/6214/nav-close.png" alt="Nav Button Close" /> </div>
+                    <nav>
+                        <ul>
+                            <li><a href="/user/books">Trang chủ</a></li>
+                            <li><a href="/user/mybooks">Sách đang mượn </a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="backgraound">
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="back">
+                    <div class="line1 os-animation" data-os-animation="rotateInDownLeft" data-os-animation-delay="1s"> </div>
+                    <div class="line2 os-animation" data-os-animation="rotateInDownLeft" data-os-animation-delay="1s"> </div>
+                    <h2 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.50s">Tổng hợp hơn 5000 đầu sách</h2>
+                    <h3 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="1s">Thư viện trực tuyến UET</h3>
+                    <div class="line3 os-animation" data-os-animation="rotateInDownRight" data-os-animation-delay="1s"> </div>
+                    <div class="line4 os-animation" data-os-animation="rotateInDownRight" data-os-animation-delay="1s"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="textbox os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
+                <h3>Mã sách</h3>
+                <input type="text" placeholder="Kiến trúc hướng dịch vụ" />
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="textbox os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
+                <h3>Tên sách</h3>
+                <input type="text" placeholder="KTHDV" />
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="textbox1 os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
+                <h3>Tác giả</h3>
+                <input type="text" placeholder="Ths. Võ Đình Hiếu" />
+                <span class="search" onclick="searchbook(this)" id="aa"><a href="#" ><i class="fa fa-search"></i></a></span> </div>
+        </div>
+    </div>
+</section>
+<section class="saction4">
+    <div class="container" id="offer">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="dotted3 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1s"></div>
+                <div class="special">
+                    <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="0.50s">Sách được mượn nhiều nhất</h2>
+                    <div class="dotted4 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1s"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4" th:each="book:${bookList}">
+            <div class="slider clearfix os-animation" data-os-animation="fadeInDown
+" data-os-animation-delay="0.20s">
+                <div class="img clearfix"> <img src="/food/images/book.jpg" alt="" style="width: 152px; height: 164px;"/> </div>
+                <div class="title clearfix">
+                    <h3 th:text="${book.code}">KTHDV</h3>
+                    <p th:text="${book.name}">Kiến trúc hướng dịch vụ </p>
+                    <p th:text="${book.author}" style="color: aqua"></p>
+                    <a href="#" th:onclick="'rentBook(\''+ ${book.code} +'\');'">Mượn &#10152;</a> </div>
+                <!--deleteProductfromCart(\'' + ${cartproduct.cartProductID.product.urlName} + '\');-->
+            </div>
+        </div>
+    </div>
+</section>
+<section class="saction5">
+    <div class="container" id="resturant">
+
+        <!---col-->
+
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="food">
+                <h3 class="os-animation" data-os-animation="rollIn" data-os-animation-delay="2.5s">Tất cả sách</h3>
+            </div>
+            <div class="dotted7 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="2.8s"></div>
+            <div class="food1">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6" th:each="book:${bookList}">
+                        <figure class="food os-animation" data-os-animation="fadeInDown" data-os-animation-delay="3s">
+                            <img src="/food/images/book2.jpg" alt="" style="width: 170px; height: 140px"/>
+                            <div class="order">
+                                <a href="" th:text="${book.code}">KTHDV</a>
+                                <hr style="margin-top: 0px; margin-bottom: 0px; border-top: 1px solid #000000;"/>
+                                <a href="" th:text="${book.name}">Kiến trúc hương dịch vụ</a>
+                                <a href="" th:text="${book.author}">Th.s</a>
+                                <br/>
+                                <br/>
+                                <div class="title clearfix" style="float: none; width: 100%" >
+                                    <a href="#" id="aForBook" th:onclick="'rentBook(\''+ ${book.code} +'\');'">Mượn</a>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="saction8">
+    <div class="container" id="contact">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="site">
+                    <h3>Site Link</h3>
+                </div>
+                <div class="sitelink">
+                    <ul>
+                        <li> <span>&#10152;</span><a href="#">About Us</a></li>
+                        <li><span>&#10152;</span><a href="#">Contact Us</a></li>
+                        <li><span>&#10152;</span><a href="#">Privacy Policy</a></li>
+                        <li><span>&#10152;</span><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="site">
+                    <h3>Site Link</h3>
+                </div>
+                <div class="sitelink">
+                    <ul>
+                        <li> <span>&#10152;</span><a href="#">About Us</a></li>
+                        <li><span>&#10152;</span><a href="#">Contact Us</a></li>
+                        <li><span>&#10152;</span><a href="#">Privacy Policy</a></li>
+                        <li><span>&#10152;</span><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="follow">
+                    <h3>Follow Us On...</h3>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li> <i class="fa fa-facebook-square"></i><a href="#">Facebook</a></li>
+                        <li><i class="fa fa-twitter-square"></i><a href="#">Twitter</a></li>
+                        <li><i class="fa fa-linkedin-square"></i><a href="#">Linkedin</a></li>
+                        <li><i class="fa fa-google-plus-square"></i><a href="#">Google Plus</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="submit">
+                    <h3>Subscribe Newsletter</h3>
+                    <p>To get latest updates and food deals
+                        every week</p>
+                </div>
+                <div class="submitbox">
+                    <input type="text" />
+                    <div class="sub"> <a href="#">Submit</a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<footer class="saction9">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="email">&copy; All right reserved 2014  /  FoodFinder </div>
+                <p class="freetemplates">Free Template by <a href="http://freetemplates.pro/">FreeTemplates.pro</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/sidemenu.js"></script>
+<script>
+    function rentBook(bookCode) {
+        console.log("hel");
+        $.post('/user/rentbooks',{"bookCode":bookCode}).done(function (html) {
+            if (html !== "fail"){
+                top.location.href = html;
+            }
+
+        });
+    }
+    function searchbook(e) {
+        var code = e.parentNode.parentNode.parentNode.children[1].children[0].children[1].value;
+        var name = e.parentNode.parentNode.parentNode.children[2].children[0].children[1].value;
+        var author = e.parentNode.children[1].value
+    }
+</script>
+
+</body>
+</html>
