@@ -1,4 +1,4 @@
-package com.haku;
+package com.wtah;
 
 public class Config {
     public static final String MSV="15021473";

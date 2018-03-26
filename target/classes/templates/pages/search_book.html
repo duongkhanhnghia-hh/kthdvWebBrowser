@@ -88,20 +88,20 @@
         <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="textbox os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
                 <h3>Mã sách</h3>
-                <input type="text" placeholder="Kiến trúc hướng dịch vụ" />
+                <input type="text" placeholder="Số đỏ" />
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="textbox os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
                 <h3>Tên sách</h3>
-                <input type="text" placeholder="KTHDV" />
+                <input type="text" placeholder="SD" />
             </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4">
             <div class="textbox1 os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
                 <h3>Tác giả</h3>
-                <input type="text" placeholder="Ths. Võ Đình Hiếu" />
-                <span class="search"><a href="#"><i class="fa fa-search"></i></a></span> </div>
+                <input type="text" placeholder="Vũ Trọng Phụng" />
+                <span class="search" onclick="searchbook(this)"><a href="#" ><i class="fa fa-search"></i></a></span> </div>
         </div>
     </div>
 </section>
@@ -200,6 +200,17 @@
     function rentBook(bookCode) {
         console.log("hel");
         $.post('/user/rentbooks',{"bookCode":bookCode}).done(function (html) {
+            if (html !== "fail"){
+                top.location.href = html;
+            }
+
+        });
+    }
+    function searchbook(e) {
+        var code = e.parentNode.parentNode.parentNode.children[1].children[0].children[1].value;
+        var name = e.parentNode.parentNode.parentNode.children[2].children[0].children[1].value;
+        var author = e.parentNode.children[1].value
+        $.post('/user/searchbooks_tmp',{"code":code, "name":name, "author":author}).done(function (html) {
             if (html !== "fail"){
                 top.location.href = html;
             }

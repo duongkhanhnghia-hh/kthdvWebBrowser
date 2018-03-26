@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/com.haku.iml" filepath="$PROJECT_DIR$/com.haku.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.wtah.iml" filepath="$PROJECT_DIR$/com.wtah.iml" />
       <module fileurl="file://$PROJECT_DIR$/kthdvWebBrowser.iml" filepath="$PROJECT_DIR$/kthdvWebBrowser.iml" />
     </modules>
   </component>

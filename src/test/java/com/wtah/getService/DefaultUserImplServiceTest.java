@@ -1,6 +1,4 @@
-package com.haku.getService;
-
-import static org.junit.Assert.*;
+package com.wtah.getService;
 
 public class DefaultUserImplServiceTest {
 

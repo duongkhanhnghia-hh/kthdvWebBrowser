@@ -1,4 +1,4 @@
-package com.haku;
+package com.wtah;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

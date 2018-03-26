@@ -1,4 +1,4 @@
-package com.haku.model;
+package com.wtah.model;
 
 import java.io.Serializable;
 

@@ -1,6 +1,6 @@
-package com.haku.getService;
+package com.wtah.getService;
 
-import com.haku.model.User;
+import com.wtah.model.User;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;

@@ -1,17 +1,13 @@
-package com.haku.service;
+package com.wtah.service;
 
-import com.haku.model.Book;
-import org.springframework.stereotype.Service;
+import com.wtah.model.Book;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
-import javax.naming.spi.ObjectFactory;
-import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
 import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
-import java.sql.SQLException;
 import java.util.List;
 
 @javax.jws.WebService
@@ -77,7 +73,7 @@ public interface WebService {
 
     /**
      *
-     * @param arg0
+     * @param bookCode, MSV
      * @return
      *     returns client.Book
      */
@@ -89,4 +85,40 @@ public interface WebService {
     public Boolean rentBooks(
             @WebParam(name = "bookCode", targetNamespace = "")
                     String bookCode, @WebParam(name = "MSV", targetNamespace = "") String MSV);
+
+    /**
+     *
+     * @param bookCode, MSV
+     * @return
+     *     returns client.Book
+     */
+    /**
+     *
+     * @param name
+     * @return
+     *     returns client.Book
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "searchBooksByName", targetNamespace = "http://webservice.pnq.com/", className = "client.SearchBooksByName")
+    @ResponseWrapper(localName = "searchBooksByNameResponse", targetNamespace = "http://webservice.pnq.com/", className = "client.SearchBooksByNameResponse")
+    @Action(input = "http://webservice.pnq.com/WebService/searchBooksByNameRequest", output = "http://webservice.pnq.com/WebService/searchBooksByNameResponse")
+    public List<Book> searchBooksByName(
+            @WebParam(name = "name", targetNamespace = "")
+                    String name);
+
+    /**
+     *
+     * @param author
+     * @return
+     *     returns client.Book
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "searchBooksByAuthor", targetNamespace = "http://webservice.pnq.com/", className = "client.SearchBooksByAuthor")
+    @ResponseWrapper(localName = "searchBooksByAuthorResponse", targetNamespace = "http://webservice.pnq.com/", className = "client.SearchBooksByAuthorResponse")
+    @Action(input = "http://webservice.pnq.com/WebService/searchBooksByAuthorRequest", output = "http://webservice.pnq.com/WebService/searchBooksByAuthorResponse")
+    public List<Book> searchBooksByAuthor(
+            @WebParam(name = "author", targetNamespace = "")
+                    String author);
 }
