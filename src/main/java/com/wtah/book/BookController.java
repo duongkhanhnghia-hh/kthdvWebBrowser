@@ -18,7 +18,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping(value = "/user/")
-public class BookAPI {
+public class BookController {
     @RequestMapping(value = "/books")
     public String getAllBooks(ModelMap modelMap){
         WebService webService = connectToService();
@@ -28,10 +28,7 @@ public class BookAPI {
     }
     @RequestMapping(value = "/mybooks")
     public String getMyBooks(ModelMap modelMap){
-
         WebService webService = connectToService();
-
-
         List<Book> bookList = webService.getBookRented(Config.MSV);
         modelMap.addAttribute("bookList", bookList);
         return "my_book";
@@ -56,7 +53,7 @@ public class BookAPI {
         Boolean isName = name.equals("");
         Boolean isAuthor = author.equals("");
         if(isCode && isName && isAuthor){
-            return "/stww";
+            bookList = webService.searchBooksByName(name);
         }else if (isCode && isName && !isAuthor){
             bookList = webService.searchBooksByAuthor(author);
         }
@@ -77,7 +74,9 @@ public class BookAPI {
         }
         else if(!isCode && isName && isAuthor){
             book = webService.getBookByCode(code);
-            bookList.add(book);
+            if(book.getCode() != null) {
+                bookList.add(book);
+            }
         }else if (!isCode && isName && !isAuthor){
             book = webService.getBookByCode(code);
             if(book != null && book.getAuthor()!= null ) {

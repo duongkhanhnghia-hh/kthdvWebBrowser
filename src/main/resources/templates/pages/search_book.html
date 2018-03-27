@@ -122,8 +122,12 @@
                 <div class="img clearfix"> <img src="/food/images/book.jpg" alt="" style="width: 152px; height: 164px;"/> </div>
                 <div class="title clearfix">
                     <h3 th:text="${book.code}">KTHDV</h3>
-                    <p th:text="${book.name}">Kiến trúc hướng dịch vụ </p>
-                    <p th:text="${book.author}" style="color: aqua"></p>
+                    <p th:text="${book.name}" style="margin-bottom: 10px">Kiến trúc hướng dịch vụ </p>
+                    <p th:text="${book.author}" style="color: aqua; margin-bottom: 10px"></p>
+                    <p>
+                        <span>Số lượng: </span>
+                        <span th:text="${book.quantityInStock}"></span>
+                    </p>
                     <a href="#" th:onclick="'rentBook(\''+ ${book.code} +'\');'">Mượn &#10152;</a> </div>
             </div>
         </div>
